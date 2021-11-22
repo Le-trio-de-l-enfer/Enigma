@@ -5,7 +5,7 @@ namespace enigma {
     Enigma::Enigma {}
 
 
-    Enigma::createKey {
+    void Enigma::createKey {
         std::srand(std::time(nullptr));
         int random = std::rand();
         int keyLength = 26
@@ -18,7 +18,7 @@ namespace enigma {
     }
 
 
-    std::ostream& operator<<(std::ostream& os, const Account& account) {
+    std::ostream& operator<<(std::ostream& os, const Enigma& enigma) {
         os << "key : " << enigma.getKey() << std::endl;
         return os;
     }
