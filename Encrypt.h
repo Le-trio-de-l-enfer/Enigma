@@ -19,7 +19,7 @@ namespace encrypt {
       std::string getCipher() const; //lire le message chiffrer
       virtual void encode(); //Permet d'encoder le message non-chiffrer
       virtual void decode(); //Permet de decoder le message chiffrer
-      void read(std::string nomFichier); //Permet de lire le contenu d'un fichier
+      std::string read(std::string nomFichier); //Permet de lire le contenu d'un fichier
       void write(std::string nomFichier); //Permet d'ecrire dans un fichier
 
 

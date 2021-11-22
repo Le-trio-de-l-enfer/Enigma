@@ -7,8 +7,8 @@ int main(int argc, char const *argv[])
     e.createKey();
     e.read("../test.txt");
     //e.read("test.txt");
+    e.encode();
 
-    std::cout << e.getKeyToString() << std::endl;
 
     return 0;
 }
