@@ -15,10 +15,11 @@ namespace enigma {
             std::vector<int> _key;
             
         public:
+            Enigma();
             void createKey();
             std::vector<int> getKey() { return _key; };
-            // void encode() override;
-            // void decode() override;
+             void encode() override;
+             void decode() override;
         
     };
 

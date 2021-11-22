@@ -1,14 +1,18 @@
 #include "Enigma.h"
 
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
+
 namespace enigma {
 
-    Enigma::Enigma {}
+    Enigma::Enigma () {}
 
 
-    void Enigma::createKey {
+    void Enigma::createKey() {
         std::srand(std::time(nullptr));
         int random = std::rand();
-        int keyLength = 26
+        int keyLength = 26;
 
         for(int i = 0; i < keyLength; i++)
         {
@@ -18,8 +22,12 @@ namespace enigma {
     }
 
 
+    void Enigma::encode(){};
+    void Enigma::decode(){};
+
+
     std::ostream& operator<<(std::ostream& os, const Enigma& enigma) {
-        os << "key : " << enigma.getKey() << std::endl;
+        // os << "key : " << enigma.getKey() << std::endl;
         return os;
     }
 }
