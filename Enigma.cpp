@@ -16,18 +16,23 @@ namespace enigma {
 
         for(int i = 0; i < keyLength; i++)
         {
-            int x = 1 + std::rand()/((RAND_MAX)/6);
+            int x = std::rand()/((RAND_MAX)/keyLength);
             _key.push_back(x);
         }
+    }
+
+    std::string Enigma::getKeyToString() {
+        std::string ret = "";
+        int keyLength = 26;
+        for(int i = 0; i < keyLength; i++) {
+            ret += std::to_string(_key.at(i)) + " ";
+        }
+        
+        return ret;
     }
 
 
     void Enigma::encode(){};
     void Enigma::decode(){};
 
-
-    std::ostream& operator<<(std::ostream& os, const Enigma& enigma) {
-        // os << "key : " << enigma.getKey() << std::endl;
-        return os;
-    }
 }
