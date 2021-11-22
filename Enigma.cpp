@@ -13,16 +13,15 @@ namespace enigma {
 
     void Enigma::createKey() {
         std::srand(std::time(nullptr));
-        int random = std::rand();
+        auto random = std::rand();
         int keyLength = 26;
-        auto rng = std::default_random_engine {};
         // A : 65, Z : 90
 
         for(int i = 65; i < 91; i++) {
             _key.push_back(char(i));
         }
 
-        std::shuffle(std::begin(_key), std::end(_key), rng);
+        std::random_shuffle(_key.begin(), _key.end());
 
         
 
