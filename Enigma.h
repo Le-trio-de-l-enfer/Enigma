@@ -12,12 +12,12 @@ namespace enigma {
     class Enigma : public encrypt::Encrypt {
         // Enigma herite de la class Encrypt
         private:
-            std::vector<int> _key;
+            std::vector<char> _key;
             
         public:
             Enigma();
             void createKey();
-            std::vector<int> getKey() { return _key; };
+            std::vector<char > getKey() { return _key; };
             std::string getKeyToString();
             void encode() override;
             void decode() override;
