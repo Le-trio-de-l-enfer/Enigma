@@ -5,8 +5,7 @@ int main(int argc, char const *argv[])
 {
     enigma::Enigma e;
     e.createKey();
-    std::cout << e << std::endl;
-
+    e.read("test.txt");
     std::cout << "hello world" << std::endl;
 
     return 0;

@@ -18,13 +18,10 @@ namespace enigma {
             Enigma();
             void createKey();
             std::vector<int> getKey() { return _key; };
-             void encode() override;
-             void decode() override;
+            void encode() override;
+            void decode() override;
         
     };
-
-    std::ostream& operator<<(std::ostream& os, const Enigma& enigma);
-
 }
 
 

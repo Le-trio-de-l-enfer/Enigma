@@ -25,9 +25,4 @@ namespace enigma {
     void Enigma::encode(){};
     void Enigma::decode(){};
 
-
-    std::ostream& operator<<(std::ostream& os, const Enigma& enigma) {
-        // os << "key : " << enigma.getKey() << std::endl;
-        return os;
-    }
 }
