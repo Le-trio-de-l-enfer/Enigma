@@ -3,9 +3,9 @@
 
 int main(int argc, char const *argv[])
 {
-    Enigma e;
+    enigma::Enigma e;
     e.createKey();
-    std::cout << e.getKey().toString() << endl;
+    std::cout << e << std::endl;
 
     std::cout << "hello world" << std::endl;
 

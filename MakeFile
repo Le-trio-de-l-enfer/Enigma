@@ -4,7 +4,7 @@ CXX        = clang++
 CXXFLAGS   = -Wall  -std=c++17
 DEPFLAGS   = -MMD
 LDFLAGS    =
-SRCS       = bank.cpp person.cpp main.cpp
+SRCS       = Encrupt.cpp Enigma.cpp Main.cpp
 OBJS       = $(SRCS:.cpp=.o)
 TARGET     = app
 DEPS	   = $(OBJS:.o=.d)
