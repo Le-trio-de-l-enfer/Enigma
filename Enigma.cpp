@@ -2,13 +2,13 @@
 
 namespace enigma {
 
-    Enigma::Enigma {}
+    Enigma::Enigma () {}
 
 
-    Enigma::createKey {
+    void Enigma::createKey() {
         std::srand(std::time(nullptr));
         int random = std::rand();
-        int keyLength = 26
+        int keyLength = 26;
 
         for(int i = 0; i < keyLength; i++)
         {
@@ -18,8 +18,8 @@ namespace enigma {
     }
 
 
-    std::ostream& operator<<(std::ostream& os, const Account& account) {
-        os << "key : " << enigma.getKey() << std::endl;
+    std::ostream& operator<<(std::ostream& os, const Enigma& enigma) {
+        //os << "key : " << enigma.getKey() << std::endl;
         return os;
     }
 }
