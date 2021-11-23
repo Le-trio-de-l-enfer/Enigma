@@ -29,22 +29,22 @@ namespace enigma {
 
     void Enigma::encode(){
         std::cout << this->getKey() << std::endl;
-        rotate(this->_key.begin(), this->_key.begin() + 1, this->_key.end());
-        std::cout << this->getKey() << std::endl;
-        rotate(this->_key.begin(), this->_key.begin() + 1, this->_key.end());
-        std::cout << this->getKey() << std::endl;
-
+        //rotate(this->_key.begin(), this->_key.begin() + 1, this->_key.end());
+        std::string res = "";
 
         for (int i = 0; i < this->getPlain().size(); ++i) {
             int temp =  int(this->getPlain().at(i));
             if (temp != 32) {
                 temp-=65;
+                res += this->getKey().at(temp);
+
+            } else {
+                res += char(32);
             }
-            std::cout << char(temp) << " ";
-
-
+            rotate(this->_key.begin(), this->_key.begin() + 1, this->_key.end());
         }
-        std::cout << std::endl;
+        std::cout << res << std::endl;
+
     }
 
     void Enigma::decode(){
