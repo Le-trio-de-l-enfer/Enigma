@@ -29,7 +29,6 @@ namespace enigma {
 
     void Enigma::encode(){
         std::cout << this->getKey() << std::endl;
-        //rotate(this->_key.begin(), this->_key.begin() + 1, this->_key.end());
         std::string res = "";
 
         for (int i = 0; i < this->getPlain().size(); ++i) {
