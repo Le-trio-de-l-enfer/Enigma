@@ -17,12 +17,14 @@ namespace enigma {
         public:
             Enigma();
             void createKey();
-            std::vector<char > getKey() { return _key; };
-            std::string getKeyToString();
+            std::vector<char> getKey() { return _key; };
             void encode() override;
             void decode() override;
         
     };
+
+    std::ostream& operator<<(std::ostream& os, const  std::vector<char>& listeKey);
+
 
 
 }

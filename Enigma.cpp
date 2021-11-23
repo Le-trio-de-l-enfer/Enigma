@@ -17,34 +17,22 @@ namespace enigma {
         int keyLength = 26;
         // A : 65, Z : 90
 
-        for(int i = 65; i < 91; i++) {
+        for (int i = 65; i < 91; i++) {
             _key.push_back(char(i));
         }
 
         std::random_shuffle(_key.begin(), _key.end());
 
-        
 
-    }
-
-    std::string Enigma::getKeyToString() {
-        std::string ret = "";
-        int keyLength = 26;
-        for(int i = 0; i < keyLength; i++) {
-            ret += _key.at(i);
-            ret += " ";
-        }
-        
-        return ret;
     }
 
 
     void Enigma::encode(){
-        std::cout << this->getKeyToString() << std::endl;
+        std::cout << this->getKey() << std::endl;
         rotate(this->_key.begin(), this->_key.begin() + 1, this->_key.end());
-        std::cout << this->getKeyToString() << std::endl;
+        std::cout << this->getKey() << std::endl;
         rotate(this->_key.begin(), this->_key.begin() + 1, this->_key.end());
-        std::cout << this->getKeyToString() << std::endl;
+        std::cout << this->getKey() << std::endl;
 
 
         for (int i = 0; i < this->getPlain().size(); ++i) {
@@ -61,6 +49,14 @@ namespace enigma {
 
     void Enigma::decode(){
 
+    }
+
+    std::ostream& operator<<(std::ostream& os, const std::vector<char>& listeKey) {
+        for (int i = 0; i < listeKey.size(); ++i) {
+            os << listeKey.at(i);
+            os << " ";
+        }
+        return os;
     }
 
 }
