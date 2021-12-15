@@ -1,3 +1,9 @@
+/**
+* @author Benjamin MILHET, Nicolas BENOIT
+*
+**/
+
+
 #include "Enigma.h"
 
 #include <cstdlib>
@@ -12,23 +18,17 @@ namespace enigma {
         this->createKey();
     }
 
-
+    //Genere la clef pour encode/decoder
     void Enigma::createKey() {
         std::srand(std::time(nullptr));
-        //auto random = std::rand();
-        //int keyLength = 26;
-        // A : 65, Z : 90
-
         for (int i = 65; i < 91; i++) {
             _key.push_back(char(i));
         }
 
         std::random_shuffle(_key.begin(), _key.end());
-
-
     }
 
-
+    //Permet d'encoder le message à partir de la clef d'encryptage
     void Enigma::encode(){
         std::cout << this->getKey() << std::endl;
         std::vector<char> copyKey = this->getKey();
@@ -39,20 +39,16 @@ namespace enigma {
             if (temp != 32) {
                 temp-=65;
                 res += copyKey.at(temp);
-                //std::cout << temp << copyKey.at(temp) << "   " << char(temp+65) << std::endl;
-
                 rotate(copyKey.begin(), copyKey.begin() + 1, copyKey.end());
-
             } else {
                 res += char(32);
             }
-
         }
         _cipher = res;
         std::cout << res << std::endl;
-
     }
 
+    //Permet de décoder le message à partir de la clef d'encryptage
     void Enigma::decode(){
         std::string res = "";
         std::cout << this->getKey() << std::endl;
@@ -63,20 +59,17 @@ namespace enigma {
             if (temp != 32) {
                 auto recup = std::find(copyKey.begin(), copyKey.end(), temp);
                 temp = recup - copyKey.begin();
-                //temp -= 65;
                 res += char(temp + 65);
-                //std::cout << temp << copyKey.at(temp) << std::endl;
                 rotate(copyKey.begin(), copyKey.begin() + 1, copyKey.end());
-
             } else {
                 res += char(32);
             }
-
         }
         //_plain = res;
         std::cout << res << std::endl;
     }
 
+    //Surcharge de l'opérateur << afin de pouvoir afficher la clef
     std::ostream& operator<<(std::ostream& os, const std::vector<char>& listeKey) {
         for (int i = 0; i < listeKey.size(); ++i) {
             os << listeKey.at(i);
