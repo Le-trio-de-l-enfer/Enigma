@@ -17,7 +17,7 @@ namespace encrypt {
     protected:
        std::string _plain; //Message non chiffré
        std::string _cipher; //Message chiffré
-       std::string getFichier(); //Demande a l'utilisateur qu'elle fichier il faut lire
+       std::string getFichier(int type); //Demande a l'utilisateur qu'elle fichier il faut lire
 
     public:
       Encrypt();
@@ -26,7 +26,7 @@ namespace encrypt {
       virtual void encode(); //Permet d'encoder le message non-chiffrer
       virtual void decode(); //Permet de decoder le message chiffrer
       std::string read(); //Permet de lire le contenu d'un fichier
-      void write(std::string nomFichier); //Permet d'ecrire dans un fichier
+      void write(std::string message); //Permet d'ecrire dans un fichier
 
 
   };

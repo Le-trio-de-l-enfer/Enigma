@@ -12,17 +12,17 @@ int main(int argc, char const *argv[])
     std::cin >> res;
     switch (res) {
       case '1': {
-        enigma::Enigma e;
-        e.read();
-        e.encode();
-        e.decode();
+          enigma::Enigma e;
+          e.read();
+          e.encode();
+          e.decode();
         }
         break;
       case '2': {
-        enigma2rotors::Enigma2Rotors enigma2Rotors;
-        enigma2Rotors.read();
-        enigma2Rotors.encode();
-        enigma2Rotors.decode();
+          enigma2rotors::Enigma2Rotors enigma2Rotors;
+          enigma2Rotors.read();
+          enigma2Rotors.encode();
+          enigma2Rotors.decode();
         }
         break;
       default:

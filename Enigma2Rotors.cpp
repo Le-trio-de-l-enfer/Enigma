@@ -62,6 +62,7 @@ namespace enigma2rotors {
         }
         _cipher = res;
         std::cout << res << std::endl; //Affichage du message encoder
+        this->write(res);
 
     }
 

@@ -47,6 +47,7 @@ namespace enigma {
         }
         _cipher = res;
         std::cout << res << std::endl;
+        this->write(res);
 
     }
 
@@ -81,5 +82,7 @@ namespace enigma {
         }
         return os;
     }
+
+
 
 }

@@ -28,7 +28,7 @@ namespace encrypt {
 
   //Permet de lire le contenu d'un fichier
   std::string Encrypt::read() {
-      std::ifstream fichier(this->getFichier());  //Ouverture d'un fichier en lecture
+      std::ifstream fichier(this->getFichier(1));  //Ouverture d'un fichier en lecture
 
       std::string ligne; //Contenu ligne par ligne du fichier
       std::string res = ""; //Contenu du fichier
@@ -48,21 +48,32 @@ namespace encrypt {
   }
 
   //Permet d'écrire dans un fichier de sortie
-  void Encrypt::write(std::string nomFichier) {
-      std::ofstream fichier(nomFichier);  //On essaye d'ouvrir le fichier
+  void Encrypt::write(std::string message) {
+      std::ofstream fichier(this->getFichier(2));  //On essaye d'ouvrir le fichier
 
       if (fichier) {
-          fichier << "hello world" << std::endl;
+          fichier << message << std::endl;
       } else {
           std::cout << "ERREUR: Impossible d'ouvrir le fichier." << std::endl;
       }
   }
 
 
-  std::string Encrypt::getFichier() {
-      std::cout << "Saisir le nom du fichier avec son extension (.txt) : " ;
+  std::string Encrypt::getFichier(int type) {
+    switch (type) {
+      case 1:
+        std::cout << "Saisir le nom du fichier ou lire le message : " ;
+        break;
+      case 2:
+        std::cout << "Saisir le nom du fichier de sortie du message crypte: " ;
+        break;
+      default:
+        std::cout << "Saisir le nom du fichier : ";
+        break;
+    }
       std::string res;
       std::cin >> res;
+      res += ".txt";
       return res;
   }
 
