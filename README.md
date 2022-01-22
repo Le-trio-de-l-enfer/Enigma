@@ -9,7 +9,7 @@
 Sujet propose par M. Ginhac (https://github.com/dginhac)
 
 ## Introdution
-Nous avons de décider de commencer pour notre premier TP par l'un des TP les plus complexes. Nous avions tout deux déja programmer suite à notre DUT Informatique avant d'intégrer l'ESIREM. Durant notre cursus, nos différent cours nous ont appris le dévelopements orientés objet ainsi que différent langage de programmation dont le C++. Nous avons déja réaliser des projets de dévellopements ensemble et nous avons donc créer un repo Github dès le début. 
+Nous avons de décider de commencer pour notre premier TP par l'un des TP les plus complexes. Nous avions tout deux déja programmer suite à notre DUT Informatique avant d'intégrer l'ESIREM. Durant notre cursus, nos différent cours nous ont appris le dévelopements orientés objet ainsi que différent langage de programmation dont le C++. Nous avons déja réaliser des projets de dévellopements ensemble et nous avons donc créer un repo Github dès le début. Ce TP a pour but d'implementer un algorithme de cryptage base sur la machine Enigma. utilise pendant la seconde guerre mondial.
 
 
 ## Deroulement du TP
