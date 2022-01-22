@@ -3,10 +3,10 @@
 ## TP5 C++ : Enigma
 
 ### Membres du groupe
-```
+
   - Nicolas BENOIT (https://github.com/ballandilin)
   - Benjamin MILHET (https://github.com/Orchanyne)
-```
+
 
 Sujet propose par M. Ginhac (https://github.com/dginhac)
 
