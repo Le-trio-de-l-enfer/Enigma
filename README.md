@@ -25,5 +25,5 @@ La principale difficulté de ce TP était de comprendre le fonctionnement de la 
 ![alt text](https://github.com/Le-trio-de-l-enfer/Enigma/blob/version-no-bug/1.png?raw=true)
 
 ### Rendu avec deux rotors
-![alt text](https://github.com/Le-trio-de-l-enfer/Enigma/blob/main/2.png?raw=true)
+![alt text](https://github.com/Le-trio-de-l-enfer/Enigma/blob/version-no-bug/2.png?raw=true)
 
